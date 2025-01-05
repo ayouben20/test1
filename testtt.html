@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUKAINA</title>
+    <style>
+        /* Basic reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set up the body background and overall layout */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff6f61, #ff9a8b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+        }
+
+        /* Title container for animation */
+        .title-container {
+            position: relative;
+        }
+
+        /* Styling for the title text */
+        h1 {
+            font-size: 5rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+            animation: titleAnimation 2s ease-in-out infinite;
+        }
+
+        /* Animation for the title */
+        @keyframes titleAnimation {
+            0% {
+                color: #fff;
+                transform: translateY(-20px);
+            }
+            50% {
+                color: #ffe600;
+                transform: translateY(0);
+            }
+            100% {
+                color: #fff;
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* Add subtle shadow effect for extra depth */
+        h1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: -1;
+            filter: blur(5px);
+            animation: shadowAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes shadowAnimation {
+            0% {
+                transform: translateX(-10px) translateY(-10px);
+            }
+            50% {
+                transform: translateX(10px) translateY(10px);
+            }
+            100% {
+                transform: translateX(-10px) translateY(-10px);
+            }
+        }
+
+        /* Add glow effect */
+        h1:hover {
+            text-shadow: 0 0 20px #ff9a8b, 0 0 30px #ff6f61;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h1>SOUKAINA</h1>
+    </div>
+</body>
+</html>
